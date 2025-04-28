@@ -1,0 +1,166 @@
+:: StoryTitle
+ABM Project Story
+
+
+:: StoryData
+{
+  "ifid": "6958C2ED-1FA6-4577-A48F-E2383C802C5E",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start Again",
+  "zoom": 1
+}
+
+
+:: AskAdult {"position":"1525,475","size":"100,100"}
+You show the article to a trusted adult — maybe your parent, teacher, or librarian.
+
+They laugh softly and say:
+
+"Whenever you see something outrageous online, always ask three things:
+
+1. Who published this?
+
+2. Why did they publish it?
+
+3. Where else is this story being reported?"
+
+They pull up a news aggregator, and you notice no credible news source has mentioned anything about aliens in Central Park.
+
+(set: $clues to it + (a: "Asked Adult: Verify who published and why."))
+
+[[Use a fact-checking website|FactCheck]]
+
+[[Do a reverse image search|ImageSearch]]
+
+[[Finish Investigation|FinishInvestigation]]
+
+
+:: FactCheck {"position":"1325,250","size":"100,100"}
+You type "Aliens Land Central Park" into a fact-checking website.
+
+Several articles pop up.
+
+A major fact-checker states:
+"Claim: FALSE — Story originated from a parody news site specializing in fictional entertainment."
+
+You dig deeper and find the website's About page:
+"We create fake news for fun. None of our stories should be taken seriously."
+
+You've uncovered a major clue.
+
+(set: $clues to it + (a: "Fact Check: Story traced back to parody website."))
+
+[[Do a reverse image search|ImageSearch]]
+
+[[Ask a trusted adult|AskAdult]]
+
+[[Finish Investigation|FinishInvestigation]]
+
+
+:: FinishInvestigation {"position":"1500,50","size":"100,100"}
+You take a moment to reflect on what you've discovered.
+
+Here’s what your investigation uncovered:
+
+{ (for: each _clue, ...$clues)[ • (print: _clue)<br> ] }
+
+You found (print: $clues's length) out of 3 possible clues!
+
+{ (if: $clues's length >= 2)[ Well done! 🎉
+Thanks to your critical thinking, you realized the article was fake.
+You protected your reputation — and helped slow the spread of misinformation. ] (else:)[ You missed some important clues.
+In the digital world, even a moment’s doubt can save you from spreading falsehoods.
+Next time, investigate a little deeper! ] }
+
+[[Play Again|Start Again]]
+
+
+:: ImageSearch {"position":"1775,225","size":"100,100"}
+Curious about the photo attached to the post, you perform a reverse image search.
+
+The results show that the same alien photo was uploaded five years ago as part of an art installation in New Jersey.
+
+One entry even labels it:
+"Performance Art Piece: 'Visitors from Beyond'"
+
+This strongly suggests the image isn't real evidence of today's events.
+
+(set: $clues to it + (a: "Reverse Image Search: Image linked to 5-year-old art project."))
+
+[[Use a fact-checking website|FactCheck]]
+
+[[Ask a trusted adult|AskAdult]]
+
+[[Finish Investigation|FinishInvestigation]]
+
+
+:: Investigate {"position":"1000,250","size":"100,100"}
+You pause.
+
+You remember your teacher’s advice from last week:
+“Always verify, especially when a story seems unbelievable.”
+
+How would you like to start investigating?
+
+[[Use a fact-checking website|FactCheck]]
+
+[[Do a reverse image search|ImageSearch]]
+
+[[Ask a trusted adult|AskAdult]]
+
+
+
+:: Page 2 {"position":"150,325","size":"100,100"}
+
+
+
+:: Shared {"position":"1000,425","size":"100,100"}
+Without giving it a second thought, you tap "Share."
+
+Minutes later, your notifications blow up.
+
+Some friends are thrilled. Others are posting angry corrections, calling out misinformation.
+
+Your history teacher even comments:
+"Remember to fact-check before sharing, folks. Not everything viral is true."
+
+The post gets flagged by the platform for spreading false information.
+
+You feel embarrassed... and a little regretful.
+
+[[Try Again|Start Again]]
+
+
+:: Start Again {"position":"700,325","size":"100,100"}
+\:: Start
+
+(set: $clues to (a:))
+
+It's just another evening when you're scrolling through your social media feed.
+
+A shocking headline flashes across the screen:
+
+BREAKING: Aliens Land in Central Park, Eyewitnesses Stunned
+
+New York City — In a historic moment that experts are already calling "the most important event in human history," multiple witnesses have reported seeing unidentified flying objects descend onto Central Park late last night.
+
+Dozens of stunned onlookers described a "blinding light" followed by the appearance of two thin, gray-skinned beings. Videos and blurry photos of the alleged aliens have flooded social media platforms, sparking worldwide excitement and debate.
+
+"I was just walking my dog when I saw this huge glowing disc hover above the trees," said local resident Linda Marks. "Then I saw these creatures step out... they didn’t look human."
+
+Anonymous officials, allegedly from a "special government task force," were spotted entering the park within minutes. Speculation is mounting that the government is already covering up the incident.
+
+Though no major news networks have officially reported on the story, believers argue that mainstream media is deliberately suppressing the truth.
+
+The situation continues to develop, and many urge the public to "stay awake" and "trust what they see with their own eyes."
+
+Over 5,000 people have already shared it. Some comments are excited, others are skeptical.
+
+You feel a rush of curiosity. Your best friend just reposted it, writing: "OMG you guys this is real!"
+
+What do you do?
+
+[[Share it immediately|Shared]]
+
+[[Investigate before sharing|Investigate]]
