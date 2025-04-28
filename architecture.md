@@ -21,11 +21,20 @@ No external libraries or frameworks are used, ensuring a lightweight, portable d
 
 ## Game Architecture Diagram
 
-[User Interface] | |---> [Game Logic Engine (JavaScript)] | | | |---> Stakeholder Trust Manager | |---> Decision Engine | |---> Narrative Consequence Handler | |---> [Stakeholder Trust Visualization (CSS Trust Bars)] | |---> [Narrative Feedback System] | |---> Headlines, Social Media Posts, Event Logs
+- **User Interface**
+  - Renders the game layout, decision buttons, trust bars, and narrative feedback.
 
-markdown
-Copy
-Edit
+- **Game Logic Engine (JavaScript)**
+  - **Stakeholder Trust Manager**: Updates and tracks trust levels for each stakeholder.
+  - **Decision Engine**: Processes player decisions and applies trust impacts.
+  - **Narrative Consequence Handler**: Triggers narrative events, game-over conditions, or feedback based on trust thresholds.
+
+- **Stakeholder Trust Visualization (CSS Trust Bars)**
+  - Displays dynamic trust levels for stakeholders through animated horizontal bars.
+
+- **Narrative Feedback System**
+  - Generates story elements that change or end depending on the status of stakeholder trust.
+  - Once trust reaches below a certain threshold, the story ends with EduBot being a failure.
 
 ---
 
